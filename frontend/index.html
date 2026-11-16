@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DASON | Finanzas personales</title>
+  <meta name="description" content="Organiza tus ingresos, controla tus gastos y toma mejores decisiones financieras con DASON.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="header">
+    <nav class="navbar" aria-label="Navegación principal">
+
+      <a href="index.html" class="logo">DASON</a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="nav-content">
+        ☰
+      </button>
+
+      <div class="nav-content" id="nav-content">
+
+        <div class="nav-links">
+          <a href="index.html" class="active" aria-current="page">Inicio</a>
+          <a href="funciones.html">Funciones</a>
+          <a href="soluciones.html">Soluciones</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="cuenta.html?modo=entrar" class="btn btn-outline">
+            Iniciar sesión
+          </a>
+
+          <a href="cuenta.html?modo=crear" class="btn btn-primary">
+            Crear cuenta
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- PÁGINA PRINCIPAL -->
+  <main>
+    <section class="hero">
+
+      <div class="hero-container">
+
+        <!-- CONTENIDO -->
+        <div class="hero-content">
+
+
+
+          <h1>
+            El control de tus finanzas
+            <span>comienza aquí.</span>
+          </h1>
+
+          <p>
+            Administra tus ingresos, organiza tus gastos
+            y toma mejores decisiones financieras
+            desde un solo lugar.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="cuenta.html?modo=entrar" class="btn btn-primary btn-large">
+              Iniciar sesión
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="cuenta.html?modo=crear" class="btn btn-outline btn-large">
+              Crear cuenta
+            </a>
+
+          </div>
+
+        </div>
+
+        <figure class="summary">
+          <figcaption>Un día con DASON <small>Ejemplo</small></figcaption>
+          <div class="balance">Dinero disponible<strong>$42.000</strong></div>
+          <dl class="movements">
+            <div><dt><i aria-hidden="true">↓</i> Pago recibido</dt><dd>+ $50.000</dd></div>
+            <div><dt><i aria-hidden="true">↑</i> Café</dt><dd>− $3.000</dd></div>
+            <div><dt><i aria-hidden="true">↑</i> Transporte</dt><dd>− $5.000</dd></div>
+          </dl>
+        </figure>
+
+      </div>
+
+    </section>
+    <section class="about">
+      <h2>¿Cómo funciona DASON?</h2>
+      <p>DASON es una aplicación de finanzas personales pensada para responder una pregunta cotidiana: después de pagar lo de hoy, ¿cuánto dinero me queda?</p>
+      <div class="steps">
+        <article><h3>Al recibir dinero</h3><p>Empieza con lo que tienes y anota cada pago que recibas. Un sueldo, un trabajo por horas o un reembolso pueden entrar en días distintos.</p></article>
+        <article><h3>Después de una compra</h3><p>Guarda el importe y una nota mientras lo recuerdas. Al revisar tus cuentas el domingo, sabrás qué pagaste el lunes.</p></article>
+        <article><h3>Antes del próximo pago</h3><p>Mira tu saldo junto con los gastos que vienen. Si aún tienes que pagar el transporte de la semana, podrás tenerlo presente antes de otra compra.</p></article>
+      </div>
+      <div class="reading-links"><a href="funciones.html">Explorar las funciones →</a><a href="soluciones.html">Ver soluciones cotidianas →</a></div>
+    </section>
+  </main>
+
+</body>
+</html>

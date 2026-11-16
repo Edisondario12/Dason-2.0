@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mi cuenta | DASON</title>
+  <meta name="description" content="Organiza tus ingresos, controla tus gastos y toma mejores decisiones financieras con DASON.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="header">
+    <nav class="navbar" aria-label="Navegación principal">
+
+      <a href="index.html" class="logo">DASON</a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="nav-content">
+        ☰
+      </button>
+
+      <div class="nav-content" id="nav-content">
+
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="funciones.html">Funciones</a>
+          <a href="soluciones.html">Soluciones</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="cuenta.html?modo=entrar" class="btn btn-outline">
+            Iniciar sesión
+          </a>
+
+          <a href="cuenta.html?modo=crear" class="btn btn-primary">
+            Crear cuenta
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- PÁGINA PRINCIPAL -->
+  <main class="account">
+    <h1 id="heading" tabindex="-1">Mi cuenta</h1>
+    <p id="notice" role="status"></p>
+    <form id="credentials" hidden>
+      <label>Correo electrónico<input type="email" name="email" required autocomplete="username" maxlength="254"></label>
+      <label>Contraseña<input type="password" name="password" required maxlength="256"></label>
+      <label id="repeat">Confirma tu contraseña<input type="password" name="confirmation" autocomplete="new-password"></label>
+      <button class="btn btn-primary" id="submit"></button>
+    </form>
+    <p id="form-error" role="alert" style="color: #942d37"></p>
+    <a id="switch"></a>
+    <button id="logout" hidden class="btn btn-outline">Cerrar sesión</button>
+    <noscript>Activa JavaScript para acceder a tu cuenta.</noscript>
+  </main>
+  <script src="js/cuenta.js"></script>
+</body></html>

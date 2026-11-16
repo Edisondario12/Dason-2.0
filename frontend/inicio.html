@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi inicio | DASON</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/inicio.css?v=selector2">
+<script src="js/aporte.js?v=selector2" defer></script>
+<script src="js/inicio.js" defer></script>
+</head>
+<body class="private">
+<header><div class="bar"><a class="logo" href="inicio.html">DASON</a><button id="logout" class="btn btn-outline">Cerrar sesión</button></div></header>
+<main><nav class="actions" aria-label="Panel personal"><a class="btn btn-outline" href="movimientos.html">Mis movimientos</a><a class="btn btn-outline" href="metas.html">Metas</a></nav><h1>Inicio</h1><p id="period"></p><p id="status" role="status"></p>
+<section id="opening" hidden><h2>¿Con cuánto dinero empiezas?</h2><p>Es tu saldo de partida. Puedes empezar en cero. Solo los ingresos que registres después se cuentan en el resumen mensual.</p>
+<form id="setup"><label>Saldo inicial ($)<input name="amount" type="number" step="0.01" min="0" max="999999999999.99" value="0" required></label><button class="btn btn-primary">Guardar saldo inicial</button></form></section>
+<div id="dashboard" hidden>
+<div class="metrics"><section><h2>Saldo disponible</h2><strong id="balance"></strong></section><section><h2>Ingresos del mes</h2><strong id="income"></strong></section><section><h2>Gastos del mes</h2><strong id="expense"></strong></section></div>
+<div class="actions"><button data-kind="income" class="btn btn-primary">Registrar ingreso</button><button data-kind="expense" class="btn btn-outline">Registrar gasto</button></div>
+<section id="editor" hidden><h2 id="editor-title"></h2><form id="entry"><label>Monto ($)<input name="amount" type="number" min="0.01" step="0.01" max="999999999999.99" required></label><label>Fecha<input name="day" type="date" required></label>
+<label id="goal-choice" hidden>Apartar para una meta
+  <span class="goal-picker"><select name="goal_key"><option value="">Sin aporte</option></select></span>
+</label>
+<label id="goal-portion" hidden>Monto para la meta ($)<input name="portion" type="number" min="0.01" step="0.01" disabled></label>
+<small id="goal-help" hidden>Para apartar parte de este ingreso, <a href="metas.html">crea tu primera meta</a>.</small>
+<label id="category-field" hidden>Categoría<select name="category"><option value="">Sin categoría</option><option>Alimentación</option><option>Transporte</option><option>Vivienda</option><option>Salud</option><option>Ocio</option><option>Otros</option></select></label><label>Descripción (opcional)<input name="note" maxlength="200"></label>
+
+<div class="actions"><button class="btn btn-primary">Guardar movimiento</button><button type="button" id="cancel" class="btn btn-outline">Cancelar</button></div></form></section>
+<section class="trend" aria-labelledby="trend-title">
+  <h2 id="trend-title">Evolución del saldo</h2>
+
+  <p id="trend-change" aria-live="polite"></p>
+  <div class="trend-plot">
+    <div class="trend-scale" aria-hidden="true"><span id="trend-high"></span><span id="trend-low"></span></div>
+    <svg id="trend-svg" viewBox="0 0 600 150" preserveAspectRatio="none" role="img" aria-labelledby="trend-title trend-change">
+      <path class="trend-grid" d="M 2 6 H 598 M 2 75 H 598 M 2 144 H 598"/>
+      <path id="trend-area"/><path id="trend-line"/>
+    </svg>
+  </div>
+  <div class="trend-dates"><span id="trend-start"></span><span id="trend-end"></span></div>
+  <div id="trend-period" role="group" aria-label="Período de la gráfica">
+    <button type="button" data-days="1" aria-label="1 día" aria-pressed="false">1D</button>
+    <button type="button" data-days="5" aria-label="5 días" aria-pressed="false">5D</button>
+    <button type="button" data-days="30" aria-label="1 mes" aria-pressed="true">1M</button>
+    <button type="button" data-days="60" aria-label="2 meses" aria-pressed="false">2M</button>
+    <button type="button" data-days="90" aria-label="3 meses" aria-pressed="false">3M</button>
+  </div>
+  <details><summary>Ver saldos diarios</summary><dl id="trend-values"></dl></details>
+</section>
+<section><h2>Gastos del mes por categoría</h2><p id="category-empty">Todavía no has registrado gastos este mes.</p><ul id="category-summary"></ul></section>
+<section><h2>Movimientos recientes</h2><p id="empty">Aquí aparecerán tus ingresos y gastos cuando registres el primero.</p><ul id="recent"></ul><a class="btn btn-outline" href="movimientos.html">Ver todos mis movimientos</a></section></div></main></body></html>

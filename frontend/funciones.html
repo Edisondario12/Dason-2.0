@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Funciones | DASON</title>
+  <meta name="description" content="Organiza tus ingresos, controla tus gastos y toma mejores decisiones financieras con DASON.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="header">
+    <nav class="navbar" aria-label="Navegación principal">
+
+      <a href="index.html" class="logo">DASON</a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="nav-content">
+        ☰
+      </button>
+
+      <div class="nav-content" id="nav-content">
+
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="funciones.html" class="active" aria-current="page">Funciones</a>
+          <a href="soluciones.html">Soluciones</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="cuenta.html?modo=entrar" class="btn btn-outline">
+            Iniciar sesión
+          </a>
+
+          <a href="cuenta.html?modo=crear" class="btn btn-primary">
+            Crear cuenta
+          </a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- PÁGINA PRINCIPAL -->
+  <main class="about">
+    <h1>Funciones</h1>
+    <div class="page-intro">
+      <div><h2>Tus movimientos, en un solo lugar</h2><p>Con tu cuenta podrás llevar un historial de ingresos y gastos. Una compra aislada te dice cuánto pagaste; al reunir las compras de toda la semana puedes ver qué parte de tu dinero dedicas a cada cosa.</p></div>
+      <figure class="week"><figcaption>Gastos por categoría · Semana de ejemplo</figcaption>
+        <div>Alimentación <strong>$30.000</strong></div><meter min="0" max="60000" value="30000" aria-label="Alimentación, 50 por ciento"></meter>
+        <div>Transporte <strong>$20.000</strong></div><meter min="0" max="60000" value="20000" aria-label="Transporte, un tercio"></meter>
+        <div>Ocio <strong>$10.000</strong></div><meter min="0" max="60000" value="10000" aria-label="Ocio, un sexto"></meter>
+        <div class="total">Total gastado <strong>$60.000</strong></div>
+      </figure>
+    </div>
+    <section><h2>Qué podrás hacer con tu cuenta</h2><div class="steps">
+        <article><h3>Registrar ingresos</h3><p>Anota cuánto recibiste, cuándo y de dónde vino. Al terminar el mes podrás distinguir tus ingresos habituales de los pagos ocasionales.</p></article>
+        <article><h3>Anotar gastos</h3><p>Registra cada salida con su fecha y motivo. Una nota como «mercado del sábado» te ayudará a reconocerla más adelante.</p></article>
+        <article><h3>Consultar tu saldo</h3><p>Revisa el dinero disponible después de cada movimiento. Un ingreso de $50.000 y dos gastos por $8.000 en total dejan $42.000.</p></article>
+        <article><h3>Agrupar por categoría</h3><p>Reúne los gastos de alimentación, transporte y ocio. Ver el total de cada grupo te ayudará a elegir dónde hacer un ajuste.</p></article>
+        <article><h3>Revisar tu historial</h3><p>Vuelve a los movimientos de una semana o un mes para recordar un pago y entender por qué cambió tu saldo.</p></article>
+        <article><h3>Comparar períodos</h3><p>Contrasta lo que gastaste en una misma categoría durante dos meses. Podrás distinguir una compra puntual de un gasto que se repite.</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

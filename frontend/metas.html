@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Metas | DASON</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/inicio.css">
+<script src="js/personal.js" defer></script>
+</head>
+<body class="private goals">
+<header><div class="bar"><a class="logo" href="inicio.html">DASON</a><button id="logout" class="btn btn-outline">Cerrar sesión</button></div></header>
+<main><nav class="actions" aria-label="Panel personal"><a href="inicio.html" class="btn btn-outline">Mi inicio</a><a class="btn btn-outline" href="movimientos.html">Mis movimientos</a></nav><h1>Metas</h1>
+<section class="goal-compose">
+  <h2 id="goal-heading">¿Qué quieres lograr?</h2>
+  <p>Dale un nombre a tu meta. Si ya tienes un plan, añade cuánto quieres reunir y para cuándo.</p>
+  <form id="goal">
+    <label class="wide">Nombre de la meta<input name="title" required maxlength="200" placeholder="Viajar a Cartagena"></label>
+    <label class="wide">Detalles (opcional)<textarea name="notes" maxlength="500" rows="2" placeholder="Pasajes y alojamiento para dos personas"></textarea></label>
+    <label>Monto objetivo ($)<input name="target" type="number" min="0.01" step="0.01" max="999999999999.99" placeholder="Opcional"></label>
+    <label>Ahorro registrado manualmente ($)<input name="saved" type="number" min="0" step="0.01" max="999999999999.99" placeholder="0"></label>
+    <label class="wide">Fecha objetivo (opcional)<input name="deadline" type="date"></label>
+    <div class="wide"><button id="goal-save" class="btn btn-primary">Crear meta</button>
+    <button hidden type="button" id="goal-cancel" class="btn btn-outline">Cancelar</button></div>
+  </form>
+  <p id="status" role="status"></p>
+</section>
+<section class="goal-collection"><h2>Mis metas</h2>
+<p id="empty">Aquí aparecerán tus metas cuando guardes la primera.</p><ul id="list"></ul></section>
+</main></body></html>
